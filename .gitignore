@@ -1,6 +1,27 @@
+# Build
+build/
+*.o
+*.obj
+*.a
+*.so
+
+# CUDA intermediates
 *.i
 *.ii
 *.gpu
 *.ptx
 *.cubin
 *.fatbin
+
+# Generated outputs (keep the dir, ignore its contents)
+output/*
+!output/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+.vscode/
+*.swp

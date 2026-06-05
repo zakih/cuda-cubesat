@@ -1,0 +1,21 @@
+services:
+  sim:
+    build:
+      context: .
+      args:
+        USER_ID: ${USER_ID:-1000}
+        GROUP_ID: ${GROUP_ID:-1000}
+    container_name: cubesat-thermal
+    # GPU passthrough — requires NVIDIA Container Toolkit on the host.
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - .:/app
+    # No server to run — just keep the environment alive so you can exec in.
+    command: sleep infinity
+    restart: unless-stopped
