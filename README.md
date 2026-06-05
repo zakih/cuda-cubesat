@@ -4,11 +4,11 @@ A transient thermal simulation of a 6U CubeSat, written to compare how OpenMP an
 
 Steady state thermal results using CUDA kernel
 
-![Steady state results](output/results_field.png)
+![Steady state results](example/results_field.png)
 
 Performance scaling: Serial vs OpenMP vs CUDA
 
-![Performance scaling results](output/results_sweep.png)
+![Performance scaling results](example/results_sweep.png)
 
 
 
